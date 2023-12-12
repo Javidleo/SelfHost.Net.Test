@@ -74,7 +74,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="OrdersController.cs" />
+    <Compile Include="Controllers\BasketController.cs" />
+    <Compile Include="Controllers\ProductsController.cs" />
+    <Compile Include="Model\BasketItem.cs" />
+    <Compile Include="Model\Product.cs" />
+    <Compile Include="Model\Order.cs" />
+    <Compile Include="Controllers\OrdersController.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

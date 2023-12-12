@@ -8,15 +8,18 @@ namespace SelfHostServer.Host
     {
         static void Main(string[] args)
         {
-            var config = new HttpSelfHostConfiguration("http://localhost:5009");
+            var config = new HttpSelfHostConfiguration("http://localhost:9090");
 
-            config.Routes.MapHttpRoute("Default", "api/{controller}/{id}", new { id = RouteParameter.Optional });
+            config.Routes
+                .MapHttpRoute("Default",
+                       "api/{controller}/{id}", new { id = RouteParameter.Optional });
 
             HttpSelfHostServer server = new HttpSelfHostServer(config);
             server.OpenAsync().Wait();
 
-            // just for waiting
             Console.ReadLine();
         }
+
+
     }
 }
